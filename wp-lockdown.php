@@ -3,7 +3,7 @@
 Plugin Name: WP Lockdown
 Plugin URI: https://extrawoo.com/
 Description: Coming soon
-Version: 0.1.0
+Version: 0.0.2
 Author: Extra Woo
 Author URI: https://extrawoo.com
 Text Domain: wp-lockdown
@@ -32,3 +32,6 @@ function wp_lockdown_new_author_link( $link ) {
 
     return $link;               
 }
+
+// Disable XMLRPC
+add_filter( 'xmlrpc_enabled', '__return_false' );
